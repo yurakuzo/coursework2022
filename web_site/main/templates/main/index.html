@@ -1,0 +1,142 @@
+{% extends 'main/base.html' %}
+
+{% block header %}
+    <title>Barbershop</title>
+{% endblock %}
+
+{%block body%}
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero container"> 
+            <div class="hero-main">
+                <h1>Barber Shop<span></span></h1>
+                <a href="#" type="button" class="book_appointment">Book an appointment</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Service Section -->
+    <section id="services">
+        <h1 class="section-title">Services</h1>
+        <div class="types_of_services">
+            <div class="haircut_shave">
+                <h2 class="service-title">Haircut & Shave</h2>
+                <a href="{% url 'haircut' %}" type="button" class="description">Details</a>
+            </div>
+            <div class="facial">
+                <h2 class="service-title">Facial</h2>
+                <a href="{% url 'facial' %}" type="button" class="description">Details</a>
+            </div>
+            <div class="hand_foot_care">
+                <h2 class="service-title">Hand & Foot care</h2>
+                <a href="{% url 'handfoot' %}" type="button" class="description">Details</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section -->
+
+  <!-- Hours Section -->
+  <section class="hours">
+    
+    <div class="openinghourscontent section">
+        <h1 class="section-title">Work Hours</h1>
+        <table class="opening-hours-table">
+            <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
+                <td>Monday</td>
+                <td class="opens">09:00</td>
+                <td>-</td>
+                <td class="closes">18:00</td>
+            </tr>
+            <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
+                <td>Tuesday</td>
+                <td class="opens">09:00</td>
+                <td>-</td>
+                <td class="closes">18:00</td>
+            </tr>
+            <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
+                <td>Wednesday</td>
+                <td class="opens">09:00</td>
+                <td>-</td>
+                <td class="closes">18:00</td>
+            </tr>
+            <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
+                <td>Thursday</td>
+                <td class="opens">09:00</td>
+                <td>-</td>
+                <td class="closes">20:00</td>
+            </tr>
+            <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
+                <td>Friday</td>
+                <td class="opens">09:00</td>
+                <td>-</td>
+                <td class="closes">18:00</td>
+            </tr>
+            <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
+                <td>Saturday</td>
+                <td class="opens">10:00</td>
+                <td>-</td>
+                <td class="closes">18:00</td>
+            </tr>
+            <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
+                <td>Sunday</td>
+                <td class="opens">11:00</td>
+                <td>-</td>
+                <td class="closes">16:00</td>
+            </tr>
+        </table>
+        <script async defer src="https://js.appointlet.com/"></script>
+        <div class="appointlet-button" style="background-color:#121213;">
+            <a data-appointlet-modal href="https://appt.link/barbershop-project" >
+                Виберіть дату та час запису
+            </a>
+        </div>
+        <!-- <button style="cursor: pointer;" title="Make an Apointment Online" data-appointlet="u387">Make an Apointment Online</button> -->
+        <script>
+            (function(e, t, n, r) {
+                if (e) return;
+                t._appt = true;
+                var i = n.createElement(r),
+                    s = n.getElementsByTagName(r)[0];
+                i.async = true;
+                i.src = '//dje0x8zlxc38k.cloudfront.net/loaders/s-min.js';
+                s.parentNode.insertBefore(i, s)
+            })(window._appt, window, document, "script")
+        </script>
+    </div>
+</section>
+<!-- End Hours Section -->
+
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="section-title">About us</h1>
+        <div class="about_info">
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Cupiditate consectetur cumque inventore, quasi aut placeat id reiciendis suscipit, 
+                    iusto obcaecati qui illum maxime rem esse tenetur fuga quisquam eum assumenda.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tenetur ullam tempora expedita adipisci repellat error, 
+                    voluptas, aperiam qui perspiciatis id doloribus, 
+                    asperiores eligendi impedit? Maiores quibusdam saepe odit nesciunt ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tenetur ullam tempora expedita adipisci repellat error, 
+                    voluptas, aperiam qui perspiciatis id doloribus, 
+                    asperiores eligendi impedit? Maiores quibusdam saepe odit nesciunt ea.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section --> 
+
+    <!-- Contacts Section -->
+    <div id="contacts">
+        <h1 class="section-title">Contacts</h1>
+        <div class="contacts_info">
+            <span style="color: mediumturquoise;">Phone:</span> +11 (111) 111 1111 <br> 
+            <span style="color: mediumturquoise;">Address:</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit <br>
+            <span style="color: mediumturquoise;">Email:</span> barbershop@gmail.com <br>
+        </div>
+    </div>
+    <!-- End Contacts Section -->
+{%endblock%}

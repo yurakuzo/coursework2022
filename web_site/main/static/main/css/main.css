@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/* General */
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;   
+}
+
+html{
+    font-size: 22px;
+}
+
+body{
+    background-color: #0c0c0d;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: mediumturquoise;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #0c0c0d;
+    padding: 50px;
+}
+/* End General */
+
+/* Header Section */
+#header{
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 8%;
+}
+
+#header .header{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#header .logo{
+    z-index: 1;
+}
+
+#header .header{
+    min-height: 8vw;
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+}
+
+#header .nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    /* overflow-x: hidden; */
+}
+#header .nav-list ul a{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav-list ul li{
+    display: inline-block;
+}
+
+#header .nav-list ul a:hover{
+    color: aqua;
+}
+/* End Header Section */
+
+/* Hero Section */
+#hero{
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#hero .hero{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0c0c0d;
+    opacity: 0.55;
+    z-index: -1;
+}
+
+#hero h1{
+    display: block;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 200px;
+    font-size: 5.5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 105%;
+    width: 0;
+    background-color: mediumturquoise;
+    animation: text_reveal_box 1s ease;
+}
+
+#hero .book_appointment{
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    color:white;
+    background-color: rgb(12, 12, 13, 0.8);
+    border: 2px solid mediumturquoise;
+    font-size: 2rem;
+    border-radius: 999px;
+    transition: .1s ease box-shadow;
+}
+
+#hero .book_appointment:hover{
+    box-shadow: 0px 0px 25px 0px mediumturquoise;
+    background-color: #48d1cccc;   
+}
+/* End Hero Section */
+
+/* Key Frames */
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+/* End Key Frames */
+
+/* Service Section */
+#services{
+    background-color: #0c0c0d;
+}
+
+#services .types_of_services{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#services .types_of_services div{
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    /* border-radius: 20px;  */
+}
+
+
+#services .description{
+    display: inline-block;
+    padding: 10px 60px;
+    margin-top: 150px;
+    text-align: center;
+    color:white;
+    background-color: rgb(12, 12, 13, 0.7);
+    border: 2px solid mediumturquoise;
+    font-size: 40px;
+    border-radius: 60px;
+    transition: .1s ease box-shadow;
+}
+
+#services .description:hover{
+    box-shadow: 0px 0px 25px 0px mediumturquoise;
+    background-color: rgb(72, 209, 204, 0.8);   
+}
+
+#services .haircut_shave{
+    background-image: url(../img/haircut.jpg);
+    background-size: cover;
+    background-position: 5% 0%;
+    position: relative;
+    z-index: 1; 
+}
+
+#services .haircut_shave::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0d;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#services .facial{
+    background-image: url(../img/Facial.jpg);
+    background-size: cover;
+    background-position: 15% 0%;
+    position: relative;
+    z-index: 1; 
+}
+
+#services .facial::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0d;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#services .hand_foot_care{
+    background-image: url(../img/hand_foot_care.png);
+    background-size: cover;
+    position: relative;
+    z-index: 1; 
+}
+
+#services .hand_foot_care::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0d;
+    opacity: 0.4;
+    z-index: -1;
+}
+/* End Service Section */
+
+/* About Section */
+#about .about_info{
+    margin: 60px 0;
+}
+
+#about p{
+    margin: 40px 30px;
+    font-size: 0.9rem;
+}
+
+/* End About Section */
+
+/* Hours Secion */
+.hours {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+    font-family:Lucida Console;
+    border-radius:4px;
+    /* margin-left :60px; */
+    box-shadow: 0 0 10px black;
+    padding:0 10px 0 10px;
+    overflow: hidden;
+    /* display: inline-block; */
+}
+.openinghourscontent {
+    float:left;
+}
+
+
+.openinghourscontent h2 {
+    display:block;
+    text-align:center;
+    margin-top:.33em;
+}
+.openinghourscontent button {
+    color:white;
+    font-family:Courier New;
+    font-size:large;
+    font-weight:bolder;
+    background-color:#4679BD;
+    border-radius:4px;
+    width:100%;
+    margin-bottom:10px;
+    margin-left: 50px;
+}
+
+.opening-hours-table{
+    margin-left:50px;
+}
+.opening-hours-table tr td:first-child {
+    font-weight:bold;
+}
+#open-status {
+    display:block;
+    margin-top:-1em;
+    text-align:center;
+    border:dotted lightgrey 3px;
+}
+.openorclosed:after {
+    content:" open during these hours:";
+}
+.open {
+    color:green;
+}
+.open:after {
+    content:" Open";
+    color: #6C0;
+}
+.closed:after {
+    content:" Closed";
+    color: red;
+}
+.opening-hours-table tr td {
+    padding:5px;
+}
+
+/* End Hours Secion */
+
+/* Contacts Section */
+#contacts .contacts_info{
+    text-align:center;
+    margin: 50px 0;
+}
+
+/* End Contacts Section */
+
+/* Footer Section */
+footer{
+    background: #111;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+    margin-top: 150px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3re;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px
+    
+}
+
+.socials li{
+    margin: 0 25px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: mediumturquoise;
+
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 1px;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+/* End Footer Section */
+
